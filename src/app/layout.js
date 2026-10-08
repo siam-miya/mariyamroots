@@ -9,8 +9,8 @@ const manrope = Manrope({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={manrope.variable}>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning className={manrope.variable}>
         {children}
       </body>
     </html>

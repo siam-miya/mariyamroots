@@ -1,10 +1,9 @@
 "use client";
 
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import banner_1 from "../../assets/images/banner_1.png";
@@ -14,45 +13,32 @@ import banner_3 from "../../assets/images/banner_3.png";
 const slides = [
   {
     id: 1,
-    eyebrow: "PREMIUM COLLECTION",
+    image: banner_1,
     title: "Elevate Your Everyday Style",
     description:
-      "Discover our premium collection, crafted with quality, elegance, and attention to every detail.",
-    buttonText: "Shop Now",
-    buttonLink: "#products",
-    image: banner_1.src,
+      "Discover our premium collection, crafted with quality and attention to detail.",
   },
   {
     id: 2,
-    eyebrow: "NEW ARRIVAL",
+    image: banner_2,
     title: "Quality You Can Feel",
     description:
-      "Premium products designed to bring comfort, confidence, and a better experience to your everyday life.",
-    buttonText: "Explore Products",
-    buttonLink: "#products",
-    image: banner_2.src,
+      "Premium products designed for comfort, confidence, and everyday life.",
   },
   {
     id: 3,
-    eyebrow: "LIMITED OFFER",
+    image: banner_3,
     title: "Premium. Simple. Yours.",
     description:
-      "Experience exceptional quality at a price you'll love. Order yours today.",
-    buttonText: "Order Now",
-    buttonLink: "#order",
-    image: banner_3.src,
+      "Experience exceptional quality at a price you will love.",
   },
 ];
 
 export default function Banner() {
   return (
-    <section id="hero" className="relative overflow-hidden bg-white">
+    <section id="hero" className="w-full overflow-hidden">
       <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
-        effect="fade"
-        fadeEffect={{
-          crossFade: true,
-        }}
+        modules={[Autoplay, Pagination]}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -61,84 +47,50 @@ export default function Banner() {
           clickable: true,
         }}
         loop={true}
-        speed={900}
-        className="hero-swiper"
+        className="w-full"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="hero-slide relative overflow-hidden">
-              {/* Background Image */}
-              <div
-                className="hero-background absolute inset-0 bg-no-repeat"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                }}
-              />
+            <div
+              className="
+                relative
+                flex
+                min-h-[600px]
+                items-center
+                bg-cover
+                bg-center
+                bg-no-repeat
+                sm:min-h-[620px]
+                md:min-h-[650px]
+                lg:min-h-[700px]
+              "
+              style={{
+                backgroundImage: `url(${slide.image.src})`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black/30" />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/20" />
-
-              {/* Content */}
-              <div className="relative z-10 mx-auto flex min-h-[650px] max-w-7xl items-center px-5 py-16 sm:px-8 lg:min-h-[720px] lg:px-10">
+              <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
                 <div className="max-w-xl">
-                  {/* Eyebrow */}
-                  <span className="mb-5 inline-flex rounded-full border border-secondary/30 bg-white/90 px-4 py-2 text-xs font-bold tracking-[0.2em] text-secondary backdrop-blur-sm">
-                    {slide.eyebrow}
-                  </span>
+                  <p className="text-xs font-bold tracking-[0.2em] text-secondary">
+                    PREMIUM COLLECTION
+                  </p>
 
-                  {/* Title */}
-                  <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
+                  <h1 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
                     {slide.title}
                   </h1>
 
-                  {/* Description */}
-                  <p className="mt-6 max-w-lg text-base leading-7 text-white/90 drop-shadow sm:text-lg">
+                  <p className="mt-4 text-sm leading-6 text-white/90 sm:text-base">
                     {slide.description}
                   </p>
 
-                  {/* Buttons */}
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <div className="mt-7">
                     <a
-                      href={slide.buttonLink}
-                      className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl"
+                      href="#products"
+                      className="inline-flex rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white transition hover:bg-secondary"
                     >
-                      {slide.buttonText}
+                      Shop Now
                     </a>
-
-                    <a
-                      href="#how-it-works"
-                      className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-primary"
-                    >
-                      How It Works
-                    </a>
-                  </div>
-
-                  {/* Trust */}
-                  <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/80">
-                    <div>
-                      <span className="block font-extrabold text-white">
-                        100%
-                      </span>
-                      Quality
-                    </div>
-
-                    <div className="h-8 w-px bg-white/30" />
-
-                    <div>
-                      <span className="block font-extrabold text-white">
-                        Fast
-                      </span>
-                      Delivery
-                    </div>
-
-                    <div className="h-8 w-px bg-white/30" />
-
-                    <div>
-                      <span className="block font-extrabold text-white">
-                        Secure
-                      </span>
-                      Ordering
-                    </div>
                   </div>
                 </div>
               </div>
@@ -146,78 +98,6 @@ export default function Banner() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Responsive Background */}
-      <style jsx global>{`
-        .hero-slide {
-          min-height: 650px;
-        }
-
-        /* Desktop */
-        .hero-background {
-          background-size: cover;
-          background-position: center;
-        }
-
-        /* Tablet */
-        @media (max-width: 1024px) {
-          .hero-background {
-            background-size: cover;
-            background-position: center;
-          }
-        }
-
-        /* Mobile */
-        @media (max-width: 640px) {
-          .hero-slide {
-            min-height: 760px;
-          }
-
-          .hero-background {
-            background-size: auto 100%;
-            background-position: center top;
-          }
-
-          .hero-slide > div:nth-child(2) {
-            background: linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.18) 0%,
-              rgba(0, 0, 0, 0.28) 45%,
-              rgba(0, 0, 0, 0.55) 100%
-            );
-          }
-        }
-
-        /* Very small phones */
-        @media (max-width: 390px) {
-          .hero-slide {
-            min-height: 720px;
-          }
-
-          .hero-background {
-            background-size: auto 100%;
-            background-position: center top;
-          }
-        }
-
-        .hero-swiper .swiper-pagination {
-          bottom: 28px;
-        }
-
-        .hero-swiper .swiper-pagination-bullet {
-          width: 8px;
-          height: 8px;
-          opacity: 0.5;
-          transition: all 0.3s ease;
-        }
-
-        .hero-swiper .swiper-pagination-bullet-active {
-          width: 28px;
-          border-radius: 999px;
-          background: #074506;
-          opacity: 1;
-        }
-      `}</style>
     </section>
   );
 }

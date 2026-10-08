@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import mainlogo from "../../assets/images/mainLogo.png"
+import mainlogo from "../../assets/images/mainLogo.png";
 
 const navLinks = [
   { name: "Products", href: "#products" },
@@ -26,7 +26,7 @@ export default function Navbar() {
           href="/"
           className="shrink-0 text-2xl font-extrabold tracking-tight text-primary"
         >
-         <Image src={mainlogo} height={100} width={160} alt="logo"/>
+          <Image src={mainlogo} height={100} width={160} alt="logo" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -42,14 +42,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Call Button */}
+        {/* Desktop Order Button */}
         <div className="hidden lg:block">
           <a
-            href="tel:+8801700000000"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-primary-dark hover:shadow-lg"
+            href="#order"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-secondary hover:shadow-lg"
           >
-            <Phone size={16} />
-            Call Now
+            <ShoppingBag size={16} />
+            Order Now
           </a>
         </div>
 
@@ -81,11 +81,12 @@ export default function Navbar() {
             ))}
 
             <a
-              href="tel:+8801700000000"
+              href="#order"
+              onClick={() => setIsOpen(false)}
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white"
             >
-              <Phone size={17} />
-              Call Now
+              <ShoppingBag size={17} />
+              Order Now
             </a>
           </nav>
         </div>

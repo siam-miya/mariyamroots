@@ -1,18 +1,14 @@
 import "./globals.css";
-import { Manrope } from "next/font/google";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["400", "500", "600", "700", "800"],
-});
+export const metadata = {
+  title: "Your Website",
+  description: "Premium product landing page",
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning className={manrope.variable}>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

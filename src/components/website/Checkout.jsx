@@ -7,8 +7,8 @@ import productPhoto from "../../assets/images/product.jpg";
 import OrderSummery from "./OrderSummery";
 
 const variantsData = [
-  { size: "50ml", price: 350, oldPrice: 500, discount: "30% OFF" },
-  { size: "100ml", price: 650, oldPrice: 950, discount: "32% OFF" },
+  { size: "৫০ মিলি", price: 350, oldPrice: 500, discount: "30% OFF" },
+  { size: "১০০ মিলি", price: 650, oldPrice: 950, discount: "32% OFF" },
 ];
 
 const Checkout = () => {

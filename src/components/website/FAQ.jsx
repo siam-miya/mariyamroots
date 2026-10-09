@@ -45,7 +45,7 @@ const FAQ = () => {
             FAQ
           </span>
           <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-primary sm:text-3xl">
-            Frequently Asked <span className="text-secondary">Questions</span>
+            আপনার সকল প্রশ্নের  <span className="text-secondary">উত্তর</span>
           </h2>
           <p className="mt-2 text-xs text-gray-500 sm:text-sm">
             আপনার মনে থাকা বিভিন্ন প্রশ্নের উত্তর জেনে নিন।

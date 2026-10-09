@@ -89,7 +89,7 @@ export default function Banner() {
                       href="#products"
                       className="inline-flex rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white transition hover:bg-secondary"
                     >
-                      Shop Now
+                     অর্ডার করুন
                     </a>
                   </div>
                 </div>

@@ -5,20 +5,15 @@ import { ShoppingBag, Star, CheckCircle2, X } from "lucide-react";
 
 const ProductCard = ({ product, onVariantChange }) => {
   const [selectedVariant, setSelectedVariant] = useState(product?.variants?.[0] || {});
-  const [isImageOpen, setIsImageOpen] = useState(false); // ইমেজ পপআপ কন্ট্রোল করার জন্য state
+  const [isImageOpen, setIsImageOpen] = useState(false); 
 
   const productImage = product?.image ? product.image : "https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&w=800&q=80";
 
-  // Order Now ক্লিক হ্যান্ডলার (চেকআউট সেকশনে ডাটা পাঠানোর জন্য)
   const handleOrderClick = (e) => {
     e.preventDefault();
-    
-    // ১. কাস্টম ইভেন্ট ফায়ার করা যাতে চেকআউট সাথে সাথে আপডেট হয়
     window.dispatchEvent(
       new CustomEvent("selectProductVariant", { detail: selectedVariant.size })
     );
-
-    // ২. অর্ডার সেকশনে স্মুথ স্ক্রল করা
     const orderSection = document.getElementById("order");
     if (orderSection) {
       orderSection.scrollIntoView({ behavior: "smooth" });
@@ -147,7 +142,7 @@ const ProductCard = ({ product, onVariantChange }) => {
               </div>
             </div>
 
-            {/* Order Now Button */}
+            {/*  Button */}
             <button
               onClick={handleOrderClick}
               type="button"
@@ -157,7 +152,7 @@ const ProductCard = ({ product, onVariantChange }) => {
                 size={15}
                 className="transition-transform duration-300 group-hover/order:scale-110"
               />
-              <span>Order Now</span>
+              <span>অর্ডার করুন</span>
             </button>
           </div>
         </div>

@@ -7,11 +7,12 @@ import Image from "next/image";
 import mainlogo from "../../assets/images/mainLogo.png";
 
 const navLinks = [
-  { name: "Products", href: "#products" },
-  { name: "Benefits", href: "#benefits" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "FAQ", href: "#faq" },
+  { name: "প্রোডাক্ট", href: "#products" },
+  { name: "সুবিধাসমূহ", href: "#benefits" },
+  { name: "যেভাবে কাজ করে", href: "#how-it-works" },
+  { name: "গ্রাহকদের মতামত", href: "#testimonials" },
+  { name: "জিজ্ঞাসা", href: "#faq" },
+
 ];
 
 export default function Navbar() {
@@ -49,7 +50,7 @@ export default function Navbar() {
             className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-secondary hover:shadow-lg"
           >
             <ShoppingBag size={16} />
-            Order Now
+            অর্ডার করুন
           </a>
         </div>
 
@@ -86,7 +87,7 @@ export default function Navbar() {
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white"
             >
               <ShoppingBag size={17} />
-              Order Now
+              অর্ডার করুন
             </a>
           </nav>
         </div>

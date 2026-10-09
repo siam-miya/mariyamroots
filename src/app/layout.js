@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Your Website",
-  description: "Premium product landing page",
+  title: "Mariyam Roots",
+  description: "Premium hair oil in Bangladesh",
 };
 
 export default function RootLayout({ children }) {

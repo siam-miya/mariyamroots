@@ -59,7 +59,7 @@ const FAQ = () => {
             return (
               <div
                 key={index}
-                className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300"
+                className="overflow-hidden border border-gray-200 bg-white shadow-sm transition-all duration-300"
               >
                 <button
                   type="button"

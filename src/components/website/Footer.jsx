@@ -4,7 +4,7 @@ import React from "react";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import mainLogo from "../../assets/images/mainLogo.png"
+import mainLogo from "../../assets/images/mainLogo.png";
 
 const Footer = () => {
   return (
@@ -18,19 +18,24 @@ const Footer = () => {
               href="/"
               className="inline-block text-2xl font-extrabold tracking-tight"
             >
-             <Image src={mainLogo} height={100} width={160} alt="logo"/>
+              <Image
+                src={mainLogo}
+                height={100}
+                width={160}
+                alt="লোগো"
+              />
             </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/60">
-              Premium products crafted with quality, care, and attention to
-              every detail. Experience the difference today.
+              গুণগত মান, যত্ন এবং নিখুঁত কারুকার্যে তৈরি প্রিমিয়াম পণ্য।
+              আজই উপভোগ করুন উন্নত মানের পণ্যের অনন্য অভিজ্ঞতা।
             </p>
 
             {/* Social Links */}
             <div className="mt-7 flex items-center gap-3">
               <a
                 href="#"
-                aria-label="Facebook"
+                aria-label="ফেসবুক"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xs font-extrabold text-white/70 transition-all duration-300 hover:border-secondary hover:bg-secondary hover:text-white"
               >
                 f
@@ -38,7 +43,7 @@ const Footer = () => {
 
               <a
                 href="#"
-                aria-label="Instagram"
+                aria-label="ইনস্টাগ্রাম"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xs font-extrabold text-white/70 transition-all duration-300 hover:border-secondary hover:bg-secondary hover:text-white"
               >
                 IG
@@ -46,7 +51,7 @@ const Footer = () => {
 
               <a
                 href="#"
-                aria-label="YouTube"
+                aria-label="ইউটিউব"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xs font-extrabold text-white/70 transition-all duration-300 hover:border-secondary hover:bg-secondary hover:text-white"
               >
                 YT
@@ -57,7 +62,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-[0.15em]">
-              Quick Links
+              গুরুত্বপূর্ণ লিংক
             </h3>
 
             <ul className="mt-6 space-y-4">
@@ -66,7 +71,7 @@ const Footer = () => {
                   href="#products"
                   className="text-sm text-white/60 transition-colors hover:text-secondary"
                 >
-                  Products
+                  আমাদের পণ্যসমূহ
                 </a>
               </li>
 
@@ -75,7 +80,7 @@ const Footer = () => {
                   href="#benefits"
                   className="text-sm text-white/60 transition-colors hover:text-secondary"
                 >
-                  Benefits
+                  আমাদের সুবিধাসমূহ
                 </a>
               </li>
 
@@ -84,7 +89,7 @@ const Footer = () => {
                   href="#how-it-works"
                   className="text-sm text-white/60 transition-colors hover:text-secondary"
                 >
-                  How It Works
+                  যেভাবে কাজ করে
                 </a>
               </li>
 
@@ -93,7 +98,7 @@ const Footer = () => {
                   href="#testimonials"
                   className="text-sm text-white/60 transition-colors hover:text-secondary"
                 >
-                  Testimonials
+                  গ্রাহকদের মতামত
                 </a>
               </li>
 
@@ -102,7 +107,7 @@ const Footer = () => {
                   href="#faq"
                   className="text-sm text-white/60 transition-colors hover:text-secondary"
                 >
-                  FAQ
+                  সচরাচর জিজ্ঞাসা
                 </a>
               </li>
             </ul>
@@ -111,7 +116,7 @@ const Footer = () => {
           {/* Support */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-[0.15em]">
-              Support
+              যোগাযোগ ও সহায়তা
             </h3>
 
             <ul className="mt-6 space-y-5">
@@ -123,7 +128,7 @@ const Footer = () => {
                 />
 
                 <div>
-                  <p className="text-xs text-white/40">Call Us</p>
+                  <p className="text-xs text-white/40">ফোন করুন</p>
 
                   <a
                     href="tel:+8801700000000"
@@ -142,7 +147,7 @@ const Footer = () => {
                 />
 
                 <div>
-                  <p className="text-xs text-white/40">Email</p>
+                  <p className="text-xs text-white/40">ইমেইল</p>
 
                   <a
                     href="mailto:hello@example.com"
@@ -161,10 +166,10 @@ const Footer = () => {
                 />
 
                 <div>
-                  <p className="text-xs text-white/40">Location</p>
+                  <p className="text-xs text-white/40">ঠিকানা</p>
 
                   <p className="mt-1 text-sm leading-6 text-white/70">
-                    Dhaka, Bangladesh
+                    ঢাকা, বাংলাদেশ
                   </p>
                 </div>
               </li>
@@ -174,11 +179,12 @@ const Footer = () => {
           {/* Order */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-[0.15em]">
-              Ready to Order?
+              অর্ডার করতে চান?
             </h3>
 
             <p className="mt-5 text-sm leading-7 text-white/60">
-              Get your favorite product delivered directly to your doorstep.
+              আপনার পছন্দের পণ্যটি অর্ডার করুন এবং সরাসরি আপনার ঠিকানায়
+              পৌঁছে নিন।
             </p>
 
             <a
@@ -200,7 +206,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 text-center sm:px-8 md:flex-row md:text-left lg:px-10">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} YourBrand. All rights reserved.
+            © {new Date().getFullYear()} YourBrand। সর্বস্বত্ব সংরক্ষিত।
           </p>
 
           <div className="flex items-center gap-5">
@@ -208,14 +214,14 @@ const Footer = () => {
               href="#"
               className="text-xs text-white/40 transition-colors hover:text-secondary"
             >
-              Privacy Policy
+              গোপনীয়তা নীতি
             </a>
 
             <a
               href="#"
               className="text-xs text-white/40 transition-colors hover:text-secondary"
             >
-              Terms & Conditions
+              শর্তাবলি
             </a>
           </div>
         </div>

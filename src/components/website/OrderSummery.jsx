@@ -15,7 +15,7 @@ const OrderSummery = ({ isOpen, onClose, orderData }) => {
   if (!isOpen) return null;
   const orderId =
     orderData?.orderId ||
-    `HB-${Math.floor(100000 + Math.random() * 900000)}`;
+    `MR-${Math.floor(100000 + Math.random() * 900000)}`;
 
   const customerName = orderData?.name || "Md. Siam Miya";
   const customerPhone = orderData?.phone || "01700000000";

@@ -44,12 +44,10 @@ const Testimonials = ({ reviews = defaultReviews }) => {
       id="testimonials"
       className="relative overflow-hidden bg-gray-50/50 py-12 sm:py-16"
     >
-      {/* ব্যাকগ্রাউন্ড ডিজাইন */}
       <div className="pointer-events-none absolute -left-40 top-10 h-60 w-60 rounded-full bg-primary/5 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-60 w-60 rounded-full bg-secondary/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* সেকশনের শিরোনাম */}
         <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-12">
           <span className="inline-flex rounded-md border border-secondary/20 bg-secondary/5 px-3 py-1 text-[10px] font-extrabold tracking-wide text-secondary">
             সন্তুষ্ট গ্রাহকরা
@@ -91,7 +89,7 @@ const Testimonials = ({ reviews = defaultReviews }) => {
           >
             {reviews.map((review) => (
               <SwiperSlide key={review.id}>
-                <div className="overflow-hidden rounded-xl border border-gray-200 bg-white p-2 shadow-sm transition-all duration-300 hover:shadow-md">
+                <div className="overflow-hidden border border-gray-200 bg-white p-2 shadow-sm transition-all duration-300 hover:shadow-md">
                   <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-gray-100">
                     <Image
                       src={review.image}
